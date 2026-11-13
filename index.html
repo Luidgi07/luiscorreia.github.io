@@ -2036,14 +2036,15 @@ button{
 ========================================================= */
 
 .sport-detail-page{
-    position:absolute;
-    inset:0;
+    position:fixed !important;
+    inset:0 !important;
 
-    width:100%;
-    height:100%;
+    width:100vw !important;
+    height:100dvh !important;
+    min-height:100dvh !important;
 
-    overflow-y:auto;
-    overflow-x:hidden;
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
 
     background:
         radial-gradient(
@@ -2054,12 +2055,10 @@ button{
         #050608;
 
     transform:translateX(100%);
-
     opacity:0;
-
     pointer-events:none;
 
-    z-index:400;
+    z-index:99999 !important;
 
     transition:
         transform .75s cubic-bezier(.77,0,.18,1),
@@ -2067,11 +2066,21 @@ button{
 }
 
 .sport-detail-page.active{
+    position:fixed !important;
+
+    inset:0 !important;
+
+    width:100vw !important;
+    height:100dvh !important;
+    min-height:100dvh !important;
+
     transform:translateX(0);
 
     opacity:1;
 
     pointer-events:auto;
+
+    z-index:99999 !important;
 }
 
 
